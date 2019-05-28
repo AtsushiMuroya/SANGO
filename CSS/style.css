@@ -21,6 +21,8 @@ header li {
   display: inline-block;
 }
 .Header__Inner{
+  /*100%は親に合わせる*/
+  /*autoは子に合わせる*/
   height: 100%;
   margin: auto;
   max-width: 1000px;
@@ -130,14 +132,26 @@ header li {
   justify-content: space-between;
   align-items: center;
 }
+
 .Content-Art-Left{
   width: 304px;
   height: 300px;
   /*background-color: White;*/
 }
 .Content-Art-btn{
+  /*アニメーションのためのposition*/
+  position: relative;
+  /*topは初期値を設定*/
+  top: 0;
   width: 100%;
   background-color: White;
+  transition: all ease 0.5s;
+  box-shadow: 5px 5px 5px rgba(102, 68, 0, 0.5);
+}
+.Content-Art-btn:hover{
+  transition: all ease 0.5s;
+  top: -5px;
+  box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 .Content-Art-Img{
   display: block;
@@ -257,8 +271,22 @@ footer{
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-start;
   text-align: center;
+}
+.Footer__Btn{
+  position: relative;
+  left:  95%;
+  font-size: 100px;
+  top:-50px;
+  width:auto;
+  height: auto;
+}
+.fa-arrow-alt-circle-up{
+  /*position: relative;*/
+  /*left:  95%;
+  font-size: 100px;
+  top:-50px;*/
 }
 .Footer__Left{
   width: 30%;
